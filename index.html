@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vertical Motors</title>
+        <meta name="cars" content="the best cars in the world!">
+        <link rel="stylesheet" href="styles.css"/>
+    </head>
+    <body>
+        <header class="main-header">
+            <nav class="nav">
+                <ul>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <div class="dropdown">
+                        <button class="dropbtn">Models</button>
+                        <div class="dropdown-content">
+                            <a href="Sedan.html">Sedan</a>
+                            <a href="suv.html">SUV</a>
+                            <a href="sports car.html">Sports Car</a>
+                        </div>
+                    </div>
+                    <a href="contact.html">Contact Us</a>
+                    <div class="dropdown">
+                        <button class="dropbtn">Store</button>
+                        <div class="dropdown-content">
+                            <a href="parts.html">Parts</a>
+                            <a href="merchandise.html">Merch</a>
+                        </div>
+                    </div>
+                </ul>
+            </nav>
+            
+            <a href="index.html"><img class="main-company-logo"src= "Images/Company Logo.png"></a> 
+        </header>
+        <div class="slideshow-global">
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="Images/sedanslide.jpg" style="width:100%">
+                    <div class="text">Stylish Sedan</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="Images/suvslide.jpg" style="width:100%">
+                    <div class="text">Spacious SUV</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="Images/sportscarslide.jpg" style="width:100%">
+                    <div class="text">Head turning Sports Car</div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094</a>
+                <a class="next" onclick="plusSlides(1)">&#10095</a>
+            </div>
+            <br>
+
+            <div style="text-align: center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+
+        <section>
+            <div class="home-container">
+                <div class="home-content">
+                    <h3>Sedan</h3>
+                    <a href="Sedan.html"><img class="home-img" src= "Images/Sedan.png">
+                    <p class="plain-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae magnam itaque totam. Iusto, sapiente laborum, ut cupiditate consectetur, beatae esse quam nobis dolores dolore vel? Doloribus temporibus ducimus alias enim! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus neque necessitatibus cupiditate consequuntur sequi exercitationem sapiente ducimus est. Nobis porro harum aut excepturi autem obcaecati odit suscipit dolores eius ad? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae, facilis iusto atque odit ad doloremque? Optio voluptatum nostrum necessitatibus, culpa cumque voluptatibus eum repellat harum excepturi eaque, laboriosam ipsa ea.
+                    </p></a>
+                </div>
+                <div class="home-content">
+                    <h3>SUV</h3>
+                    <a href="Suv.html"><img class="home-img" src= "Images/suv.png" >
+                    <p class="plain-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae magnam itaque totam. Iusto, sapiente laborum, ut cupiditate consectetur, beatae esse quam nobis dolores dolore vel? Doloribus temporibus ducimus alias enim! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus neque necessitatibus cupiditate consequuntur sequi exercitationem sapiente ducimus est. Nobis porro harum aut excepturi autem obcaecati odit suscipit dolores eius ad? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae, facilis iusto atque odit ad doloremque? Optio voluptatum nostrum necessitatibus, culpa cumque voluptatibus eum repellat harum excepturi eaque, laboriosam ipsa ea.
+                    </p></a>
+                </div>
+                <div class="home-content">
+                    <h3>Sports Car</h3>
+                    <a href="sports car.html"><img class="home-img" src= "Images/sports car.png">
+                    <p class="plain-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae magnam itaque totam. Iusto, sapiente laborum, ut cupiditate consectetur, beatae esse quam nobis dolores dolore vel? Doloribus temporibus ducimus alias enim! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus neque necessitatibus cupiditate consequuntur sequi exercitationem sapiente ducimus est. Nobis porro harum aut excepturi autem obcaecati odit suscipit dolores eius ad? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae, facilis iusto atque odit ad doloremque? Optio voluptatum nostrum necessitatibus, culpa cumque voluptatibus eum repellat harum excepturi eaque, laboriosam ipsa ea.
+                    </p> </a>
+                </div>
+            </div>
+        </section>
+        <footer class="main-footer">
+            <div class= "container main-footer-container">
+                <h3 class="company-name">Vertical Motors</h3>
+                <ul class="nav footer-nav">
+                    <li>
+                        <a href="https://youtube.com" target="_blank">
+                            <img src="images/youtube logo.png" width="30"></li>
+                        </a>
+                    <li>
+                        <a href="https://facebook.com" target="_blank">
+                            <img src="images/Facebook logo.png" width="30"></li>
+                        </a>
+                </ul>
+            </div>
+        </footer>
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot")
+                if (n > slides.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < dots.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.legnth; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "")
+                }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+            }
+        </script>
+    </body>
+</html>
